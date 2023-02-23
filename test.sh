@@ -1,24 +1,22 @@
 echo "A executar os testes ..."
 echo
 
-output=$(./a.out)
-expected_output="Estou a aprender C."
-
-if [ $? -eq 0 ] ; then
-  echo "Aprovado: o programa terminou com retorno zero"
+saida=$(echo -e "António Silva\n12\n5\n2010\n" | ./programa)
+esperado="+-------------------+
+| Dias de vida para |
+| António Silva     |
++-------------------+
+| 4660 dias de vida |
++-------------------+"
+if [ "$saida" != "$esperado" ]; then
+    echo "Teste falhou: a saída do programa é diferente do esperado"
+    echo "Saída esperada:"
+    echo "$esperado"
+    echo "Saída do programa:"
+    echo "$saida"
+    exit 1
 else
-  echo "Falha: o programa não retornou zero"
-  exit 1
+    echo "Teste passou"
+    exit 0
 fi
 
-if [ "$output" == "$expected_output" ] ; then
-  echo "Aprovado: A saída é correcta"
-else
-  echo "Esperada a saída '$expected_output' mas o programa devolveu: $output"
-  exit 1
-fi
-
-echo
-echo "Todos os testes terminados com sucesso."
-
-exit 0
