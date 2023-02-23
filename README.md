@@ -5,7 +5,9 @@ Este exercício é escrito em C, será testado com o make e um script bash.
 Escreva um programa que leia o nome de um utilizador e a sua idade no formato Dia, Mês e
 Ano. Em seguida, apresente o nome do utilizador e os dias de vida que este tem.
 
-Saída esperada:  
+
+### Saída Esperada:
+    
 O seu nome:  
 António Silva ↵  
 Dia de nascimento:  
@@ -19,11 +21,7 @@ Ano de nascimento:
 | António Silva     |  
 +-------------------+  
 | 4660 dias de vida |  
-+-------------------+  
-
-### Saída Esperada:
-    
-    Estou a aprender C.  
++-------------------+   
 
 
 ### Notas
